@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Otus.Cpp.Homework4: Файл user_type_traits.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Otus.Cpp.Homework4
+   </div>
+   <div id="projectbrief">OTUS. C++ developer course. Homework 4.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="pages.html"><span>Описания</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Макросы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Страницы</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл user_type_traits.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Определения метафункций, расширяющих функционал type_traits стандартной библиотеки.  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;type_traits&gt;</code><br/>
+<code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;list&gt;</code><br/>
+<code>#include &lt;tuple&gt;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для user_type_traits.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="user__type__traits_8h__incl.png" border="0" usemap="#user__type__traits_8h" alt=""/></div>
+<map name="user__type__traits_8h" id="user__type__traits_8h">
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="user__type__traits_8h__dep__incl.png" border="0" usemap="#user__type__traits_8hdep" alt=""/></div>
+<map name="user__type__traits_8hdep" id="user__type__traits_8hdep">
+<area shape="rect" id="node2" href="print__ip_8h.html" title="Определения шаблонных функций печати ip адреса. " alt="" coords="88,80,161,107"/><area shape="rect" id="node3" href="homework__4_8cpp.html" title="homework_4.cpp" alt="" coords="5,155,125,181"/><area shape="rect" id="node4" href="test_8cpp.html" title="test.cpp" alt="" coords="151,155,220,181"/></map>
+</div>
+</div>
+<p><a href="user__type__traits_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__stl__container.html">is_stl_container&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метафункция, определяющая является ли проверяемый тип котейнером из стандартной библиотеки.  <a href="structis__stl__container.html#details">Подробнее...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__stl__container_3_01std_1_1vector_3_01Args_8_8_8_4_01_4.html">is_stl_container&lt; std::vector&lt; Args...&gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__stl__container_3_01std_1_1list_3_01Args_8_8_8_4_01_4.html">is_stl_container&lt; std::list&lt; Args...&gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__tuple.html">is_tuple&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метафункция, определяющая является ли проверяемый тип кортежем.  <a href="structis__tuple.html#details">Подробнее...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__tuple_3_01std_1_1tuple_3_01Args_8_8_8_4_01_4.html">is_tuple&lt; std::tuple&lt; Args...&gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__all__same.html">is_all_same&lt; Args &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метафункция, определяющая является ли все проверяемые типы одинаковыми.  <a href="structis__all__same.html#details">Подробнее...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__all__same_3_01T_00_01T_00_01Args_8_8_8_4.html">is_all_same&lt; T, T, Args...&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__all__same_3_01T_00_01U_00_01Args_8_8_8_4.html">is_all_same&lt; T, U, Args...&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__homogeneous__tuple.html">is_homogeneous_tuple&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метафункция, определяющая является ли проверяемый тип кортежем с одинаковыми типами.  <a href="structis__homogeneous__tuple.html#details">Подробнее...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__homogeneous__tuple_3_01std_1_1tuple_3_01Args_8_8_8_4_01_4.html">is_homogeneous_tuple&lt; std::tuple&lt; Args...&gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a472cb642bb82a89e2bb13c90694d649d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a472cb642bb82a89e2bb13c90694d649d"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="user__type__traits_8h.html#a472cb642bb82a89e2bb13c90694d649d">is_stl_container_v</a> = <a class="el" href="structis__stl__container.html">is_stl_container</a>&lt;T&gt;::value</td></tr>
+<tr class="memdesc:a472cb642bb82a89e2bb13c90694d649d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблонная переменная для более короткой записи получения результата от метафункции <a class="el" href="structis__stl__container.html" title="Метафункция, определяющая является ли проверяемый тип котейнером из стандартной библиотеки. ">is_stl_container</a>.  <a href="#a472cb642bb82a89e2bb13c90694d649d">Подробнее...</a><br/></td></tr>
+<tr class="separator:a472cb642bb82a89e2bb13c90694d649d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a396e4b8c756441b942c1619de108e56a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a396e4b8c756441b942c1619de108e56a"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="user__type__traits_8h.html#a396e4b8c756441b942c1619de108e56a">is_integral_v</a> = std::is_integral&lt;T&gt;::value</td></tr>
+<tr class="memdesc:a396e4b8c756441b942c1619de108e56a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблонная переменная для более короткой записи получения результата от метафункции is_integral.  <a href="#a396e4b8c756441b942c1619de108e56a">Подробнее...</a><br/></td></tr>
+<tr class="separator:a396e4b8c756441b942c1619de108e56a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f6f282ffeac81407489efbeee474dce"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a7f6f282ffeac81407489efbeee474dce"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="user__type__traits_8h.html#a7f6f282ffeac81407489efbeee474dce">is_tuple_v</a> = <a class="el" href="structis__tuple.html">is_tuple</a>&lt;Args...&gt;::value</td></tr>
+<tr class="memdesc:a7f6f282ffeac81407489efbeee474dce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблонная переменная для более короткой записи получения результата от метафункции <a class="el" href="structis__tuple.html" title="Метафункция, определяющая является ли проверяемый тип кортежем. ">is_tuple</a>.  <a href="#a7f6f282ffeac81407489efbeee474dce">Подробнее...</a><br/></td></tr>
+<tr class="separator:a7f6f282ffeac81407489efbeee474dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2af710022ee5e5bd0d062357d8d6bf85"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a2af710022ee5e5bd0d062357d8d6bf85"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="user__type__traits_8h.html#a2af710022ee5e5bd0d062357d8d6bf85">is_all_same_v</a> = <a class="el" href="structis__all__same.html">is_all_same</a>&lt;Args...&gt;::value</td></tr>
+<tr class="memdesc:a2af710022ee5e5bd0d062357d8d6bf85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблонная переменная для более короткой записи получения результата от метафункции is_all_same_v.  <a href="#a2af710022ee5e5bd0d062357d8d6bf85">Подробнее...</a><br/></td></tr>
+<tr class="separator:a2af710022ee5e5bd0d062357d8d6bf85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a53edfb6ca2463e845cac57b0637427"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a7a53edfb6ca2463e845cac57b0637427"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="user__type__traits_8h.html#a7a53edfb6ca2463e845cac57b0637427">is_homogeneous_tuple_v</a> = <a class="el" href="structis__homogeneous__tuple.html">is_homogeneous_tuple</a>&lt;Args...&gt;::value</td></tr>
+<tr class="memdesc:a7a53edfb6ca2463e845cac57b0637427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблонная переменная для более короткой записи получения результата от метафункции <a class="el" href="structis__homogeneous__tuple.html" title="Метафункция, определяющая является ли проверяемый тип кортежем с одинаковыми типами. ">is_homogeneous_tuple</a>.  <a href="#a7a53edfb6ca2463e845cac57b0637427">Подробнее...</a><br/></td></tr>
+<tr class="separator:a7a53edfb6ca2463e845cac57b0637427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Определения метафункций, расширяющих функционал type_traits стандартной библиотеки. </p>
+</div><h2 class="groupheader">Переменные</h2>
+<a class="anchor" id="a2af710022ee5e5bd0d062357d8d6bf85"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool is_all_same_v = <a class="el" href="structis__all__same.html">is_all_same</a>&lt;Args...&gt;::value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Шаблонная переменная для более короткой записи получения результата от метафункции is_all_same_v. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7a53edfb6ca2463e845cac57b0637427"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool is_homogeneous_tuple_v = <a class="el" href="structis__homogeneous__tuple.html">is_homogeneous_tuple</a>&lt;Args...&gt;::value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Шаблонная переменная для более короткой записи получения результата от метафункции <a class="el" href="structis__homogeneous__tuple.html" title="Метафункция, определяющая является ли проверяемый тип кортежем с одинаковыми типами. ">is_homogeneous_tuple</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a396e4b8c756441b942c1619de108e56a"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool is_integral_v = std::is_integral&lt;T&gt;::value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Шаблонная переменная для более короткой записи получения результата от метафункции is_integral. </p>
+
+</div>
+</div>
+<a class="anchor" id="a472cb642bb82a89e2bb13c90694d649d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool is_stl_container_v = <a class="el" href="structis__stl__container.html">is_stl_container</a>&lt;T&gt;::value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Шаблонная переменная для более короткой записи получения результата от метафункции <a class="el" href="structis__stl__container.html" title="Метафункция, определяющая является ли проверяемый тип котейнером из стандартной библиотеки. ">is_stl_container</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7f6f282ffeac81407489efbeee474dce"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool is_tuple_v = <a class="el" href="structis__tuple.html">is_tuple</a>&lt;Args...&gt;::value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Шаблонная переменная для более короткой записи получения результата от метафункции <a class="el" href="structis__tuple.html" title="Метафункция, определяющая является ли проверяемый тип кортежем. ">is_tuple</a>. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>
