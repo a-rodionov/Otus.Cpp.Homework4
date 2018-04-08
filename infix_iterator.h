@@ -16,10 +16,22 @@ along with dReal. If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+/*!
+  \file infix_iterator.h
+  \brief Определение однопроходного итератора вывода.
+  \author Soonho Kong <soonhok@cs.cmu.edu>
+  \author Sicun Gao <sicung@cs.cmu.edu>
+*/
+
 #include <iterator>
 #include <ostream>
 #include <string>
 
+/*!
+  Однопроходный итератор вывода, который записывает последовательные объекты типа T 
+  в объект std::basic_ostream, используя operator<<. Дополнительный разделитель строки 
+  записывается в выходной поток перед каждой операцией записи кроме первой. 
+ */
 template <class T, class charT = char, class traits = std::char_traits<charT> >
 class infix_ostream_iterator
     : public std::iterator<std::output_iterator_tag, void, void, void, void>
