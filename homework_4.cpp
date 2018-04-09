@@ -3,12 +3,12 @@
 
 void homework_4(std::ostream& out)
 {
-  char char_value = -1;
-  short short_value = 0;
-  int int_value = 2130706433;
-  long long_value = 8875824491850138409;
-  std::string string_value = "127.0.0.1.string";
-  std::vector<int> vector_value{10,8,0,1};
+  char char_value{-1};
+  short short_value{0};
+  int int_value{2130706433};
+  long long_value{8875824491850138409};
+  std::string string_value{"127.0.0.1.string"};
+  std::vector<int> vector_value{10,8, 0,1};
   std::list<int> list_value{120,48,0,2};
   auto tuple_value = std::make_tuple(99,255,0,3);
 
