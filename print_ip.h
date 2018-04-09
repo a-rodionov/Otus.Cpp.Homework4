@@ -19,7 +19,7 @@ template<typename T, std::enable_if_t<is_integral_v<T>, int> = 0>
 auto print_ip(std::ostream& out, const T& ip)
 {
   const std::array<unsigned char, sizeof(T)>* octets = reinterpret_cast<decltype(octets)>(&ip);
-  std::copy(octets->crbegin(), octets->crend(), infix_ostream_iterator<int>(out, "."));
+  std::copy(std::crbegin(*octets), std::crend(*octets), infix_ostream_iterator<int>(out, "."));
   out << "\n";
 }
 
@@ -31,7 +31,7 @@ auto print_ip(std::ostream& out, const T& ip)
 template<typename T, std::enable_if_t<is_stl_container_v<T>, int> = 0>
 auto print_ip(std::ostream& out, const T& ip)
 {
-	std::copy(ip.cbegin(), ip.cend(), infix_ostream_iterator<typename T::value_type>(out, "."));
+  std::copy(std::cbegin(ip), std::cend(ip), infix_ostream_iterator<typename T::value_type>(out, "."));
 	out << "\n";
 }
 

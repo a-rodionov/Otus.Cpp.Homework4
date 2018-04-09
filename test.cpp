@@ -27,14 +27,22 @@ BOOST_AUTO_TEST_CASE(test_is_stl_container_v)
   BOOST_STATIC_ASSERT(false == is_stl_container_v<float>);
   BOOST_STATIC_ASSERT(false == is_stl_container_v<std::string>);
   BOOST_STATIC_ASSERT(true == is_stl_container_v<std::vector<int>>);
-  BOOST_STATIC_ASSERT(true == is_stl_container_v<std::vector<int>>);
+  BOOST_STATIC_ASSERT(true == is_stl_container_v<const std::vector<int>>);
+  BOOST_STATIC_ASSERT(true == is_stl_container_v<volatile std::vector<int>>);
+  BOOST_STATIC_ASSERT(true == is_stl_container_v<const volatile std::vector<int>>);
   BOOST_STATIC_ASSERT(true == is_stl_container_v<std::list<std::string>>);
+  BOOST_STATIC_ASSERT(true == is_stl_container_v<const std::list<std::string>>);
+  BOOST_STATIC_ASSERT(true == is_stl_container_v<volatile std::list<std::string>>);
+  BOOST_STATIC_ASSERT(true == is_stl_container_v<const volatile std::list<std::string>>);
   BOOST_STATIC_ASSERT(false == is_stl_container_v<std::tuple<int, float>>);
 }
 
 BOOST_AUTO_TEST_CASE(test_is_integral_v)
 {
   BOOST_STATIC_ASSERT(true == is_integral_v<char>);
+  BOOST_STATIC_ASSERT(true == is_integral_v<const char>);
+  BOOST_STATIC_ASSERT(true == is_integral_v<volatile char>);
+  BOOST_STATIC_ASSERT(true == is_integral_v<const volatile char>);
   BOOST_STATIC_ASSERT(true == is_integral_v<int>);
   BOOST_STATIC_ASSERT(false == is_integral_v<float>);
   BOOST_STATIC_ASSERT(false == is_integral_v<std::string>);
@@ -54,6 +62,9 @@ BOOST_AUTO_TEST_CASE(test_is_tuple_v)
   BOOST_STATIC_ASSERT(true == is_tuple_v<std::tuple<>>);
   BOOST_STATIC_ASSERT(true == is_tuple_v<std::tuple<int, int>>);
   BOOST_STATIC_ASSERT(true == is_tuple_v<std::tuple<int, float>>);
+  BOOST_STATIC_ASSERT(true == is_tuple_v<const std::tuple<int, float>>);
+  BOOST_STATIC_ASSERT(true == is_tuple_v<volatile std::tuple<int, float>>);
+  BOOST_STATIC_ASSERT(true == is_tuple_v<const volatile std::tuple<int, float>>);
 }
 
 BOOST_AUTO_TEST_CASE(test_is_all_same_v)
@@ -61,6 +72,9 @@ BOOST_AUTO_TEST_CASE(test_is_all_same_v)
   BOOST_STATIC_ASSERT(true == is_all_same_v<>);
   BOOST_STATIC_ASSERT(true == is_all_same_v<int>);
   BOOST_STATIC_ASSERT(true == is_all_same_v<int, int>);
+  BOOST_STATIC_ASSERT(false == is_all_same_v<int, const int>);
+  BOOST_STATIC_ASSERT(false == is_all_same_v<int, volatile int>);
+  BOOST_STATIC_ASSERT(false == is_all_same_v<int, const volatile int>);
   BOOST_STATIC_ASSERT(false == is_all_same_v<int, char>);
   BOOST_STATIC_ASSERT(true == is_all_same_v<int, int, int>);
   BOOST_STATIC_ASSERT(false == is_all_same_v<int, int, char>);
@@ -73,6 +87,12 @@ BOOST_AUTO_TEST_CASE(test_is_homogeneous_tuple_v)
   BOOST_STATIC_ASSERT(true == is_homogeneous_tuple_v<std::tuple<>>);
   BOOST_STATIC_ASSERT(true == is_homogeneous_tuple_v<std::tuple<int>>);
   BOOST_STATIC_ASSERT(true == is_homogeneous_tuple_v<std::tuple<int, int>>);
+  BOOST_STATIC_ASSERT(true == is_homogeneous_tuple_v<const std::tuple<int, int>>);
+  BOOST_STATIC_ASSERT(true == is_homogeneous_tuple_v<volatile std::tuple<int, int>>);
+  BOOST_STATIC_ASSERT(true == is_homogeneous_tuple_v<const volatile std::tuple<int, int>>);
+  BOOST_STATIC_ASSERT(false == is_homogeneous_tuple_v<std::tuple<int, const int>>);
+  BOOST_STATIC_ASSERT(false == is_homogeneous_tuple_v<std::tuple<int, volatile int>>);
+  BOOST_STATIC_ASSERT(false == is_homogeneous_tuple_v<std::tuple<int, const volatile int>>);
   BOOST_STATIC_ASSERT(false == is_homogeneous_tuple_v<std::tuple<int, char>>);
   BOOST_STATIC_ASSERT(true == is_homogeneous_tuple_v<std::tuple<int, int, int>>);
   BOOST_STATIC_ASSERT(false == is_homogeneous_tuple_v<std::tuple<int, std::string, int>>);
@@ -130,6 +150,9 @@ BOOST_AUTO_TEST_CASE(test_print_ip_vector)
     "-101.202.-303.404.-505\n"
     "0.1.2.3.4.5.6.7.8.9.1\n"
     "some.strange.ip.address\n"
+    "11.22.33.44\n"
+    //"44.55.66.77\n"
+    //"77.88.99\n"
   };
   std::ostringstream oss;
 
@@ -139,6 +162,9 @@ BOOST_AUTO_TEST_CASE(test_print_ip_vector)
   std::vector<int> vector_value_4{-101, 202, -303, 404, -505};
   std::vector<float> vector_value_5{0.1, 2.3, 4.5, 6.7, 8.9, 1.0};
   std::vector<std::string> vector_value_6{"some", "strange", "ip", "address"};
+  const std::vector<int> vector_value_7{11, 22, 33, 44};
+  volatile std::vector<int> vector_value_8{44, 55, 66, 77};
+  const volatile std::vector<int> vector_value_9{77, 88, 99};
 
   print_ip(oss, vector_value_1);
   print_ip(oss, vector_value_2);
@@ -146,6 +172,9 @@ BOOST_AUTO_TEST_CASE(test_print_ip_vector)
   print_ip(oss, vector_value_4);
   print_ip(oss, vector_value_5);
   print_ip(oss, vector_value_6);
+  print_ip(oss, vector_value_7);
+  //print_ip(oss, vector_value_8);
+  //print_ip(oss, vector_value_9);
 
   BOOST_CHECK_EQUAL(oss.str(), result);
 }
@@ -159,6 +188,9 @@ BOOST_AUTO_TEST_CASE(test_print_ip_list)
     "-101.202.-303.404.-505\n"
     "0.1.2.3.4.5.6.7.8.9.1\n"
     "some.strange.ip.address\n"
+    "11.22.33.44\n"
+    //"44.55.66.77\n"
+    //"77.88.99\n"
   };
   std::ostringstream oss;
 
@@ -168,6 +200,9 @@ BOOST_AUTO_TEST_CASE(test_print_ip_list)
   std::list<int> list_value_4{-101, 202, -303, 404, -505};
   std::list<float> list_value_5{0.1, 2.3, 4.5, 6.7, 8.9, 1.0};
   std::list<std::string> list_value_6{"some", "strange", "ip", "address"};
+  const std::list<int> list_value_7{11, 22, 33, 44};
+  volatile std::list<int> list_value_8{44, 55, 66, 77};
+  const volatile std::list<int> list_value_9{77, 88, 99};
 
   print_ip(oss, list_value_1);
   print_ip(oss, list_value_2);
@@ -175,6 +210,9 @@ BOOST_AUTO_TEST_CASE(test_print_ip_list)
   print_ip(oss, list_value_4);
   print_ip(oss, list_value_5);
   print_ip(oss, list_value_6);
+  print_ip(oss, list_value_7);
+  //print_ip(oss, list_value_8);
+  //print_ip(oss, list_value_9);
 
   BOOST_CHECK_EQUAL(oss.str(), result);
 }

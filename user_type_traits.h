@@ -26,7 +26,7 @@ struct is_stl_container<std::list<Args...>> : std::true_type{};
   \brief Шаблонная переменная для более короткой записи получения результата от метафункции is_stl_container.
 */
 template <typename T>
-constexpr bool is_stl_container_v = is_stl_container<T>::value;
+constexpr bool is_stl_container_v = is_stl_container<std::remove_cv_t<T>>::value;
 
 
 
@@ -50,8 +50,8 @@ struct is_tuple<std::tuple<Args...>> : std::true_type{};
 /*!
   \brief Шаблонная переменная для более короткой записи получения результата от метафункции is_tuple.
 */
-template <typename ... Args>
-constexpr bool is_tuple_v = is_tuple<Args...>::value;
+template <typename T>
+constexpr bool is_tuple_v = is_tuple<std::remove_cv_t<T>>::value;
 
 
 
@@ -87,5 +87,5 @@ struct is_homogeneous_tuple<std::tuple<Args...>> : is_all_same<Args...>{};
 /*!
   \brief Шаблонная переменная для более короткой записи получения результата от метафункции is_homogeneous_tuple.
 */
-template <typename ... Args>
-constexpr bool is_homogeneous_tuple_v = is_homogeneous_tuple<Args...>::value;
+template <typename T>
+constexpr bool is_homogeneous_tuple_v = is_homogeneous_tuple<std::remove_cv_t<T>>::value;
