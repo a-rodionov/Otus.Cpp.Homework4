@@ -142,23 +142,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Переменные</h2></td></tr>
 <tr class="memitem:a472cb642bb82a89e2bb13c90694d649d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a472cb642bb82a89e2bb13c90694d649d"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="user__type__traits_8h.html#a472cb642bb82a89e2bb13c90694d649d">is_stl_container_v</a> = <a class="el" href="structis__stl__container.html">is_stl_container</a>&lt;T&gt;::value</td></tr>
+<tr class="memitem:a472cb642bb82a89e2bb13c90694d649d"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="user__type__traits_8h.html#a472cb642bb82a89e2bb13c90694d649d">is_stl_container_v</a> = <a class="el" href="structis__stl__container.html">is_stl_container</a>&lt;std::remove_cv_t&lt;T&gt;&gt;::value</td></tr>
 <tr class="memdesc:a472cb642bb82a89e2bb13c90694d649d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблонная переменная для более короткой записи получения результата от метафункции <a class="el" href="structis__stl__container.html" title="Метафункция, определяющая является ли проверяемый тип котейнером из стандартной библиотеки. ">is_stl_container</a>.  <a href="#a472cb642bb82a89e2bb13c90694d649d">Подробнее...</a><br/></td></tr>
 <tr class="separator:a472cb642bb82a89e2bb13c90694d649d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a396e4b8c756441b942c1619de108e56a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a396e4b8c756441b942c1619de108e56a"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="user__type__traits_8h.html#a396e4b8c756441b942c1619de108e56a">is_integral_v</a> = std::is_integral&lt;T&gt;::value</td></tr>
 <tr class="memdesc:a396e4b8c756441b942c1619de108e56a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблонная переменная для более короткой записи получения результата от метафункции is_integral.  <a href="#a396e4b8c756441b942c1619de108e56a">Подробнее...</a><br/></td></tr>
 <tr class="separator:a396e4b8c756441b942c1619de108e56a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f6f282ffeac81407489efbeee474dce"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a7f6f282ffeac81407489efbeee474dce"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="user__type__traits_8h.html#a7f6f282ffeac81407489efbeee474dce">is_tuple_v</a> = <a class="el" href="structis__tuple.html">is_tuple</a>&lt;Args...&gt;::value</td></tr>
+<tr class="memitem:a7f6f282ffeac81407489efbeee474dce"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7f6f282ffeac81407489efbeee474dce"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="user__type__traits_8h.html#a7f6f282ffeac81407489efbeee474dce">is_tuple_v</a> = <a class="el" href="structis__tuple.html">is_tuple</a>&lt;std::remove_cv_t&lt;T&gt;&gt;::value</td></tr>
 <tr class="memdesc:a7f6f282ffeac81407489efbeee474dce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблонная переменная для более короткой записи получения результата от метафункции <a class="el" href="structis__tuple.html" title="Метафункция, определяющая является ли проверяемый тип кортежем. ">is_tuple</a>.  <a href="#a7f6f282ffeac81407489efbeee474dce">Подробнее...</a><br/></td></tr>
 <tr class="separator:a7f6f282ffeac81407489efbeee474dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2af710022ee5e5bd0d062357d8d6bf85"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:a2af710022ee5e5bd0d062357d8d6bf85"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="user__type__traits_8h.html#a2af710022ee5e5bd0d062357d8d6bf85">is_all_same_v</a> = <a class="el" href="structis__all__same.html">is_all_same</a>&lt;Args...&gt;::value</td></tr>
 <tr class="memdesc:a2af710022ee5e5bd0d062357d8d6bf85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблонная переменная для более короткой записи получения результата от метафункции is_all_same_v.  <a href="#a2af710022ee5e5bd0d062357d8d6bf85">Подробнее...</a><br/></td></tr>
 <tr class="separator:a2af710022ee5e5bd0d062357d8d6bf85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a53edfb6ca2463e845cac57b0637427"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a7a53edfb6ca2463e845cac57b0637427"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="user__type__traits_8h.html#a7a53edfb6ca2463e845cac57b0637427">is_homogeneous_tuple_v</a> = <a class="el" href="structis__homogeneous__tuple.html">is_homogeneous_tuple</a>&lt;Args...&gt;::value</td></tr>
+<tr class="memitem:a7a53edfb6ca2463e845cac57b0637427"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7a53edfb6ca2463e845cac57b0637427"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="user__type__traits_8h.html#a7a53edfb6ca2463e845cac57b0637427">is_homogeneous_tuple_v</a> = <a class="el" href="structis__homogeneous__tuple.html">is_homogeneous_tuple</a>&lt;std::remove_cv_t&lt;T&gt;&gt;::value</td></tr>
 <tr class="memdesc:a7a53edfb6ca2463e845cac57b0637427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблонная переменная для более короткой записи получения результата от метафункции <a class="el" href="structis__homogeneous__tuple.html" title="Метафункция, определяющая является ли проверяемый тип кортежем с одинаковыми типами. ">is_homogeneous_tuple</a>.  <a href="#a7a53edfb6ca2463e845cac57b0637427">Подробнее...</a><br/></td></tr>
 <tr class="separator:a7a53edfb6ca2463e845cac57b0637427"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -185,10 +185,10 @@ template&lt;typename... Args&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename... Args&gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool is_homogeneous_tuple_v = <a class="el" href="structis__homogeneous__tuple.html">is_homogeneous_tuple</a>&lt;Args...&gt;::value</td>
+          <td class="memname">constexpr bool is_homogeneous_tuple_v = <a class="el" href="structis__homogeneous__tuple.html">is_homogeneous_tuple</a>&lt;std::remove_cv_t&lt;T&gt;&gt;::value</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -220,7 +220,7 @@ template&lt;typename T &gt; </div>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool is_stl_container_v = <a class="el" href="structis__stl__container.html">is_stl_container</a>&lt;T&gt;::value</td>
+          <td class="memname">constexpr bool is_stl_container_v = <a class="el" href="structis__stl__container.html">is_stl_container</a>&lt;std::remove_cv_t&lt;T&gt;&gt;::value</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -233,10 +233,10 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename... Args&gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool is_tuple_v = <a class="el" href="structis__tuple.html">is_tuple</a>&lt;Args...&gt;::value</td>
+          <td class="memname">constexpr bool is_tuple_v = <a class="el" href="structis__tuple.html">is_tuple</a>&lt;std::remove_cv_t&lt;T&gt;&gt;::value</td>
         </tr>
       </table>
 </div><div class="memdoc">
