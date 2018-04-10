@@ -173,8 +173,8 @@ BOOST_AUTO_TEST_CASE(test_print_ip_vector)
   print_ip(oss, vector_value_5);
   print_ip(oss, vector_value_6);
   print_ip(oss, vector_value_7);
-  //print_ip(oss, vector_value_8);
-  //print_ip(oss, vector_value_9);
+  //print_ip(oss, vector_value_8);  // compile error
+  //print_ip(oss, vector_value_9);  // compile error
 
   BOOST_CHECK_EQUAL(oss.str(), result);
 }
@@ -211,8 +211,8 @@ BOOST_AUTO_TEST_CASE(test_print_ip_list)
   print_ip(oss, list_value_5);
   print_ip(oss, list_value_6);
   print_ip(oss, list_value_7);
-  //print_ip(oss, list_value_8);
-  //print_ip(oss, list_value_9);
+  //print_ip(oss, list_value_8);  // compile error
+  //print_ip(oss, list_value_9);  // compile error
 
   BOOST_CHECK_EQUAL(oss.str(), result);
 }
@@ -221,14 +221,21 @@ BOOST_AUTO_TEST_CASE(test_print_ip_tuple)
 {
   std::string result{
     "99.255.0.3\n"
+    "99.255.333.3.4\n"
   };
   std::ostringstream oss;
 
   auto tuple_value_1 = std::make_tuple(99, 255, 0, 3);
-  auto tuple_value_2 = std::make_tuple(99, 255, 0, "3");
+  const auto tuple_value_2 = std::make_tuple(99, 255, 333, 3, 4);
+  volatile auto tuple_value_3 = std::make_tuple(99, 255, 0, 3, 5);
+  const volatile auto tuple_value_4 = std::make_tuple(99, 255, 0, 3, 6);
+  auto tuple_value_5 = std::make_tuple(99, 255, 0, "3");
 
   print_ip(oss, tuple_value_1);
-  //print_ip(oss, tuple_value_2);   // compile error
+  print_ip(oss, tuple_value_2);
+  //print_ip(oss, tuple_value_3);  // compile error
+  //print_ip(oss, tuple_value_4);  // compile error
+  //print_ip(oss, tuple_value_5);  // compile error
 
   BOOST_CHECK_EQUAL(oss.str(), result);
 }
