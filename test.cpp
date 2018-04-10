@@ -109,18 +109,25 @@ BOOST_AUTO_TEST_CASE(test_print_ip_integral)
   std::string result{
     "255\n"
     "0.0\n"
+    "0.1\n"
     "127.0.0.1\n"
     "123.45.67.89.101.112.131.41\n"
   };
   std::ostringstream oss;
 
   char char_value{-1};
-  short short_value{0};
+  short short_value_1{0};
+  const short short_value_2{1};
+  volatile short short_value_3{2};
+  const volatile short short_value_4{3};
   int int_value{2130706433};
   long long_value{8875824491850138409};
 
   print_ip(oss, char_value);
-  print_ip(oss, short_value);
+  print_ip(oss, short_value_1);
+  print_ip(oss, short_value_2);
+  //print_ip(oss, short_value_3);  // compile error
+  //print_ip(oss, short_value_4);  // compile error
   print_ip(oss, int_value);
   print_ip(oss, long_value);
 
