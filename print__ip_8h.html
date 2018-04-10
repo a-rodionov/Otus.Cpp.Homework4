@@ -113,28 +113,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:ac1df03b4c5eca5765c426ce24d2a9499"><td class="memTemplParams" colspan="2">template&lt;typename T , std::enable_if_t&lt; is_integral_v&lt; T &gt;, int &gt;  = 0&gt; </td></tr>
-<tr class="memitem:ac1df03b4c5eca5765c426ce24d2a9499"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print__ip_8h.html#ac1df03b4c5eca5765c426ce24d2a9499">print_ip</a> (std::ostream &amp;out, const T &amp;ip)</td></tr>
-<tr class="memdesc:ac1df03b4c5eca5765c426ce24d2a9499"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблонная функция печати ip адреса, заданного любым целочисленным типом.  <a href="#ac1df03b4c5eca5765c426ce24d2a9499">Подробнее...</a><br/></td></tr>
-<tr class="separator:ac1df03b4c5eca5765c426ce24d2a9499"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed0f4c88f38cb707216966c3cc7a043a"><td class="memTemplParams" colspan="2">template&lt;typename T , size_t... idx&gt; </td></tr>
-<tr class="memitem:aed0f4c88f38cb707216966c3cc7a043a"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print__ip_8h.html#aed0f4c88f38cb707216966c3cc7a043a">print_ip_tuple</a> (std::ostream &amp;out, const T &amp;ip, std::index_sequence&lt; idx...&gt;)</td></tr>
-<tr class="memdesc:aed0f4c88f38cb707216966c3cc7a043a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблонная функция печати кортежа.  <a href="#aed0f4c88f38cb707216966c3cc7a043a">Подробнее...</a><br/></td></tr>
-<tr class="separator:aed0f4c88f38cb707216966c3cc7a043a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e1275afe8425ae43f8af93451d53dde"><td class="memTemplParams" colspan="2">template&lt;typename U , typename T , std::enable_if_t&lt; is_integral_v&lt; T &gt;, int &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a9e1275afe8425ae43f8af93451d53dde"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print__ip_8h.html#a9e1275afe8425ae43f8af93451d53dde">print_ip</a> (U &amp;out, const T &amp;ip)</td></tr>
+<tr class="memdesc:a9e1275afe8425ae43f8af93451d53dde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблонная функция печати ip адреса, заданного любым целочисленным типом.  <a href="#a9e1275afe8425ae43f8af93451d53dde">Подробнее...</a><br/></td></tr>
+<tr class="separator:a9e1275afe8425ae43f8af93451d53dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ce0d8b384fb9e495c073e972f62bc18"><td class="memTemplParams" colspan="2">template&lt;typename U , typename T , size_t... idx&gt; </td></tr>
+<tr class="memitem:a6ce0d8b384fb9e495c073e972f62bc18"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print__ip_8h.html#a6ce0d8b384fb9e495c073e972f62bc18">print_ip_tuple</a> (U &amp;out, const T &amp;ip, std::index_sequence&lt; idx...&gt;)</td></tr>
+<tr class="memdesc:a6ce0d8b384fb9e495c073e972f62bc18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблонная функция печати кортежа.  <a href="#a6ce0d8b384fb9e495c073e972f62bc18">Подробнее...</a><br/></td></tr>
+<tr class="separator:a6ce0d8b384fb9e495c073e972f62bc18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p>Определения шаблонных функций печати ip адреса. </p>
 </div><h2 class="groupheader">Функции</h2>
-<a class="anchor" id="ac1df03b4c5eca5765c426ce24d2a9499"></a>
+<a class="anchor" id="a9e1275afe8425ae43f8af93451d53dde"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , std::enable_if_t&lt; is_integral_v&lt; T &gt;, int &gt;  = 0&gt; </div>
+template&lt;typename U , typename T , std::enable_if_t&lt; is_integral_v&lt; T &gt;, int &gt;  = 0&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">auto print_ip </td>
           <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramtype">U &amp;&#160;</td>
           <td class="paramname"><em>out</em>, </td>
         </tr>
         <tr>
@@ -167,16 +167,16 @@ template&lt;typename T , std::enable_if_t&lt; is_integral_v&lt; T &gt;, int &gt;
 
 </div>
 </div>
-<a class="anchor" id="aed0f4c88f38cb707216966c3cc7a043a"></a>
+<a class="anchor" id="a6ce0d8b384fb9e495c073e972f62bc18"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , size_t... idx&gt; </div>
+template&lt;typename U , typename T , size_t... idx&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">auto print_ip_tuple </td>
           <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramtype">U &amp;&#160;</td>
           <td class="paramname"><em>out</em>, </td>
         </tr>
         <tr>
