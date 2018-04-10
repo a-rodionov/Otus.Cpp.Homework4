@@ -1,6 +1,8 @@
 #include "version.h"
 #include "homework_4.h"
 #include "print_ip.h"
+#include <locale>
+#include <codecvt>
 
 #define BOOST_TEST_MODULE test_main
 
@@ -138,14 +140,43 @@ BOOST_AUTO_TEST_CASE(test_print_ip_string)
 {
   std::string result{
     "127.0.0.1.string\n"
+    "127.0.0.1.const_string\n"
   };
   std::ostringstream oss;
 
-  std::string string_value{"127.0.0.1.string"};
+  std::string string_value_1{"127.0.0.1.string"};
+  const std::string string_value_2{"127.0.0.1.const_string"};
+  volatile std::string string_value_3{"127.0.0.1.volatile_string"};
+  const volatile std::string string_value_4{"127.0.0.1.const_volatile_string"};
 
-  print_ip(oss, string_value);
+  print_ip(oss, string_value_1);
+  print_ip(oss, string_value_2);
+  //print_ip(oss, string_value_3);  // compile error
+  //print_ip(oss, string_value_4);  // compile error
 
   BOOST_CHECK_EQUAL(oss.str(), result);
+}
+
+BOOST_AUTO_TEST_CASE(test_print_ip_wstring)
+{
+  std::string result{
+    "127.0.0.1.wstring\n"
+    "127.0.0.1.const_wstring\n"
+  };
+  std::wostringstream woss;
+  std::wstring_convert<std::codecvt_utf8<wchar_t>, wchar_t> cv;
+
+  std::wstring wstring_value_1{L"127.0.0.1.wstring"};
+  const std::wstring wstring_value_2{L"127.0.0.1.const_wstring"};
+  volatile std::wstring wstring_value_3{L"127.0.0.1.volatile_wstring"};
+  const volatile std::wstring wstring_value_4{L"127.0.0.1.const_volatile_wstring"};
+
+  print_ip(woss, wstring_value_1);
+  print_ip(woss, wstring_value_2);
+  //print_ip(woss, wstring_value_3);  // compile error
+  //print_ip(woss, wstring_value_4);  // compile error
+
+  BOOST_CHECK_EQUAL(cv.to_bytes(woss.str()), result);
 }
 
 BOOST_AUTO_TEST_CASE(test_print_ip_vector)
