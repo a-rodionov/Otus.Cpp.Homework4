@@ -136,7 +136,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__homogeneous__tuple.html">is_homogeneous_tuple&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метафункция, определяющая является ли проверяемый тип кортежем с одинаковыми типами.  <a href="structis__homogeneous__tuple.html#details">Подробнее...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__homogeneous__tuple_3_01std_1_1tuple_3_01Args_8_8_8_4_01_4.html">is_homogeneous_tuple&lt; std::tuple&lt; Args...&gt; &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__homogeneous__tuple_3_01std_1_1tuple_3_01T_00_01Args_8_8_8_4_01_4.html">is_homogeneous_tuple&lt; std::tuple&lt; T, Args...&gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__empty__tuple.html">is_empty_tuple&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метафункция, определяющая является ли проверяемый тип пустым кортежем.  <a href="structis__empty__tuple.html#details">Подробнее...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__empty__tuple_3_01std_1_1tuple_3_4_01_4.html">is_empty_tuple&lt; std::tuple&lt;&gt; &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -161,6 +166,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <tr class="memitem:a7a53edfb6ca2463e845cac57b0637427"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="user__type__traits_8h.html#a7a53edfb6ca2463e845cac57b0637427">is_homogeneous_tuple_v</a> = <a class="el" href="structis__homogeneous__tuple.html">is_homogeneous_tuple</a>&lt;std::remove_cv_t&lt;T&gt;&gt;::value</td></tr>
 <tr class="memdesc:a7a53edfb6ca2463e845cac57b0637427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблонная переменная для более короткой записи получения результата от метафункции <a class="el" href="structis__homogeneous__tuple.html" title="Метафункция, определяющая является ли проверяемый тип кортежем с одинаковыми типами. ">is_homogeneous_tuple</a>.  <a href="#a7a53edfb6ca2463e845cac57b0637427">Подробнее...</a><br/></td></tr>
 <tr class="separator:a7a53edfb6ca2463e845cac57b0637427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae19ad5d07d77b7194dd64b99418fb1c1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ae19ad5d07d77b7194dd64b99418fb1c1"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="user__type__traits_8h.html#ae19ad5d07d77b7194dd64b99418fb1c1">is_empty_tuple_v</a> = <a class="el" href="structis__empty__tuple.html">is_empty_tuple</a>&lt;std::remove_cv_t&lt;T&gt;&gt;::value</td></tr>
+<tr class="memdesc:ae19ad5d07d77b7194dd64b99418fb1c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблонная переменная для более короткой записи получения результата от метафункции <a class="el" href="structis__empty__tuple.html" title="Метафункция, определяющая является ли проверяемый тип пустым кортежем. ">is_empty_tuple</a>.  <a href="#ae19ad5d07d77b7194dd64b99418fb1c1">Подробнее...</a><br/></td></tr>
+<tr class="separator:ae19ad5d07d77b7194dd64b99418fb1c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p>Определения метафункций, расширяющих функционал type_traits стандартной библиотеки. </p>
@@ -178,6 +187,22 @@ template&lt;typename... Args&gt; </div>
 </div><div class="memdoc">
 
 <p>Шаблонная переменная для более короткой записи получения результата от метафункции is_all_same_v. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae19ad5d07d77b7194dd64b99418fb1c1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool is_empty_tuple_v = <a class="el" href="structis__empty__tuple.html">is_empty_tuple</a>&lt;std::remove_cv_t&lt;T&gt;&gt;::value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Шаблонная переменная для более короткой записи получения результата от метафункции <a class="el" href="structis__empty__tuple.html" title="Метафункция, определяющая является ли проверяемый тип пустым кортежем. ">is_empty_tuple</a>. </p>
 
 </div>
 </div>

@@ -1,10 +1,10 @@
 <map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
 <area shape="rect" id="node2" href="$structis__all__same.html" title="Метафункция, определяющая является ли все проверяемые типы одинаковыми. " alt="" coords="143,5,286,32"/>
-<area shape="rect" id="node3" href="$structis__all__same.html" title="is_all_same\&lt; Args...\&gt;" alt="" coords="139,56,290,83"/>
-<area shape="rect" id="node5" href="$structis__all__same.html" title="is_all_same\&lt; T, Args...\&gt;" alt="" coords="131,107,298,133"/>
-<area shape="rect" id="node7" href="$structis__stl__container_3_01std_1_1list_3_01Args_8_8_8_4_01_4.html" title="is_stl_container\&lt; std\l::list\&lt; Args...\&gt; \&gt;" alt="" coords="143,158,286,199"/>
-<area shape="rect" id="node8" href="$structis__stl__container_3_01std_1_1vector_3_01Args_8_8_8_4_01_4.html" title="is_stl_container\&lt; std\l::vector\&lt; Args...\&gt; \&gt;" alt="" coords="143,223,286,265"/>
-<area shape="rect" id="node9" href="$structis__tuple_3_01std_1_1tuple_3_01Args_8_8_8_4_01_4.html" title="is_tuple\&lt; std::tuple\l\&lt; Args...\&gt; \&gt;" alt="" coords="148,289,281,330"/>
-<area shape="rect" id="node4" href="$structis__homogeneous__tuple_3_01std_1_1tuple_3_01Args_8_8_8_4_01_4.html" title="is_homogeneous_tuple\l\&lt; std::tuple\&lt; Args...\&gt; \&gt;" alt="" coords="347,42,506,83"/>
-<area shape="rect" id="node6" href="$structis__all__same_3_01T_00_01T_00_01Args_8_8_8_4.html" title="is_all_same\&lt; T, T,\l Args...\&gt;" alt="" coords="361,107,492,149"/>
+<area shape="rect" id="node3" href="$structis__all__same.html" title="is_all_same\&lt; T, Args...\&gt;" alt="" coords="131,56,298,83"/>
+<area shape="rect" id="node6" href="$structis__empty__tuple_3_01std_1_1tuple_3_4_01_4.html" title="is_empty_tuple\&lt; std\l::tuple\&lt;\&gt; \&gt;" alt="" coords="145,107,285,149"/>
+<area shape="rect" id="node7" href="$structis__stl__container_3_01std_1_1list_3_01Args_8_8_8_4_01_4.html" title="is_stl_container\&lt; std\l::list\&lt; Args...\&gt; \&gt;" alt="" coords="143,173,286,214"/>
+<area shape="rect" id="node8" href="$structis__stl__container_3_01std_1_1vector_3_01Args_8_8_8_4_01_4.html" title="is_stl_container\&lt; std\l::vector\&lt; Args...\&gt; \&gt;" alt="" coords="143,238,286,279"/>
+<area shape="rect" id="node9" href="$structis__tuple_3_01std_1_1tuple_3_01Args_8_8_8_4_01_4.html" title="is_tuple\&lt; std::tuple\l\&lt; Args...\&gt; \&gt;" alt="" coords="148,303,281,345"/>
+<area shape="rect" id="node4" href="$structis__all__same_3_01T_00_01T_00_01Args_8_8_8_4.html" title="is_all_same\&lt; T, T,\l Args...\&gt;" alt="" coords="369,17,500,58"/>
+<area shape="rect" id="node5" href="$structis__homogeneous__tuple_3_01std_1_1tuple_3_01T_00_01Args_8_8_8_4_01_4.html" title="is_homogeneous_tuple\l\&lt; std::tuple\&lt; T, Args...\&gt; \&gt;" alt="" coords="347,82,522,123"/>
 </map>
