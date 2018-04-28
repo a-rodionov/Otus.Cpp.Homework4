@@ -86,7 +86,7 @@ BOOST_AUTO_TEST_CASE(test_is_all_same_v)
 
 BOOST_AUTO_TEST_CASE(test_is_homogeneous_tuple_v)
 {
-  BOOST_STATIC_ASSERT(true == is_homogeneous_tuple_v<std::tuple<>>);
+  BOOST_STATIC_ASSERT(false == is_homogeneous_tuple_v<std::tuple<>>);
   BOOST_STATIC_ASSERT(true == is_homogeneous_tuple_v<std::tuple<int>>);
   BOOST_STATIC_ASSERT(true == is_homogeneous_tuple_v<std::tuple<int, int>>);
   BOOST_STATIC_ASSERT(true == is_homogeneous_tuple_v<const std::tuple<int, int>>);
@@ -98,6 +98,19 @@ BOOST_AUTO_TEST_CASE(test_is_homogeneous_tuple_v)
   BOOST_STATIC_ASSERT(false == is_homogeneous_tuple_v<std::tuple<int, char>>);
   BOOST_STATIC_ASSERT(true == is_homogeneous_tuple_v<std::tuple<int, int, int>>);
   BOOST_STATIC_ASSERT(false == is_homogeneous_tuple_v<std::tuple<int, std::string, int>>);
+}
+
+BOOST_AUTO_TEST_CASE(test_is_empty_tuple_v)
+{
+  BOOST_STATIC_ASSERT(true == is_empty_tuple_v<std::tuple<>>);
+  BOOST_STATIC_ASSERT(true == is_empty_tuple_v<const std::tuple<>>);
+  BOOST_STATIC_ASSERT(true == is_empty_tuple_v<volatile std::tuple<>>);
+  BOOST_STATIC_ASSERT(true == is_empty_tuple_v<const volatile std::tuple<>>);
+  BOOST_STATIC_ASSERT(false == is_empty_tuple_v<int>);
+  BOOST_STATIC_ASSERT(false == is_empty_tuple_v<std::vector<int>>);
+  BOOST_STATIC_ASSERT(false == is_empty_tuple_v<std::string>);
+  BOOST_STATIC_ASSERT(false == is_empty_tuple_v<std::tuple<int>>);
+  BOOST_STATIC_ASSERT(false == is_empty_tuple_v<std::tuple<int, int>>);
 }
 
 BOOST_AUTO_TEST_SUITE_END()
@@ -194,15 +207,16 @@ BOOST_AUTO_TEST_CASE(test_print_ip_vector)
   };
   std::ostringstream oss;
 
-  std::vector<int> vector_value_1{1, 2};
-  std::vector<int> vector_value_2{10, 20, 30, 40};
-  std::vector<int> vector_value_3{100, 200, 300, 400, 500, 600};
-  std::vector<int> vector_value_4{-101, 202, -303, 404, -505};
-  std::vector<float> vector_value_5{0.1, 2.3, 4.5, 6.7, 8.9, 1.0};
-  std::vector<std::string> vector_value_6{"some", "strange", "ip", "address"};
-  const std::vector<int> vector_value_7{11, 22, 33, 44};
-  volatile std::vector<int> vector_value_8{44, 55, 66, 77};
-  const volatile std::vector<int> vector_value_9{77, 88, 99};
+  std::vector<int> vector_value_1{};
+  std::vector<int> vector_value_2{1, 2};
+  std::vector<int> vector_value_3{10, 20, 30, 40};
+  std::vector<int> vector_value_4{100, 200, 300, 400, 500, 600};
+  std::vector<int> vector_value_5{-101, 202, -303, 404, -505};
+  std::vector<float> vector_value_6{0.1, 2.3, 4.5, 6.7, 8.9, 1.0};
+  std::vector<std::string> vector_value_7{"some", "strange", "ip", "address"};
+  const std::vector<int> vector_value_8{11, 22, 33, 44};
+  volatile std::vector<int> vector_value_9{44, 55, 66, 77};
+  const volatile std::vector<int> vector_value_10{77, 88, 99};
 
   print_ip(oss, vector_value_1);
   print_ip(oss, vector_value_2);
@@ -211,8 +225,9 @@ BOOST_AUTO_TEST_CASE(test_print_ip_vector)
   print_ip(oss, vector_value_5);
   print_ip(oss, vector_value_6);
   print_ip(oss, vector_value_7);
-  //print_ip(oss, vector_value_8);  // compile error
+  print_ip(oss, vector_value_8);
   //print_ip(oss, vector_value_9);  // compile error
+  //print_ip(oss, vector_value_10); // compile error
 
   BOOST_CHECK_EQUAL(oss.str(), result);
 }
@@ -232,15 +247,16 @@ BOOST_AUTO_TEST_CASE(test_print_ip_list)
   };
   std::ostringstream oss;
 
-  std::list<int> list_value_1{1, 2};
-  std::list<int> list_value_2{10, 20, 30, 40};
-  std::list<int> list_value_3{100, 200, 300, 400, 500, 600};
-  std::list<int> list_value_4{-101, 202, -303, 404, -505};
-  std::list<float> list_value_5{0.1, 2.3, 4.5, 6.7, 8.9, 1.0};
-  std::list<std::string> list_value_6{"some", "strange", "ip", "address"};
-  const std::list<int> list_value_7{11, 22, 33, 44};
-  volatile std::list<int> list_value_8{44, 55, 66, 77};
-  const volatile std::list<int> list_value_9{77, 88, 99};
+  std::list<int> list_value_1{};
+  std::list<int> list_value_2{1, 2};
+  std::list<int> list_value_3{10, 20, 30, 40};
+  std::list<int> list_value_4{100, 200, 300, 400, 500, 600};
+  std::list<int> list_value_5{-101, 202, -303, 404, -505};
+  std::list<float> list_value_6{0.1, 2.3, 4.5, 6.7, 8.9, 1.0};
+  std::list<std::string> list_value_7{"some", "strange", "ip", "address"};
+  const std::list<int> list_value_8{11, 22, 33, 44};
+  volatile std::list<int> list_value_9{44, 55, 66, 77};
+  const volatile std::list<int> list_value_10{77, 88, 99};
 
   print_ip(oss, list_value_1);
   print_ip(oss, list_value_2);
@@ -249,8 +265,9 @@ BOOST_AUTO_TEST_CASE(test_print_ip_list)
   print_ip(oss, list_value_5);
   print_ip(oss, list_value_6);
   print_ip(oss, list_value_7);
-  //print_ip(oss, list_value_8);  // compile error
+  print_ip(oss, list_value_8);
   //print_ip(oss, list_value_9);  // compile error
+  //print_ip(oss, list_value_10); // compile error
 
   BOOST_CHECK_EQUAL(oss.str(), result);
 }
@@ -263,17 +280,19 @@ BOOST_AUTO_TEST_CASE(test_print_ip_tuple)
   };
   std::ostringstream oss;
 
-  auto tuple_value_1 = std::make_tuple(99, 255, 0, 3);
-  const auto tuple_value_2 = std::make_tuple(99, 255, 333, 3, 4);
-  volatile auto tuple_value_3 = std::make_tuple(99, 255, 0, 3, 5);
-  const volatile auto tuple_value_4 = std::make_tuple(99, 255, 0, 3, 6);
-  auto tuple_value_5 = std::make_tuple(99, 255, 0, "3");
+  auto tuple_value_1 = std::make_tuple();
+  auto tuple_value_2 = std::make_tuple(99, 255, 0, 3);
+  const auto tuple_value_3 = std::make_tuple(99, 255, 333, 3, 4);
+  volatile auto tuple_value_4 = std::make_tuple(99, 255, 0, 3, 5);
+  const volatile auto tuple_value_5 = std::make_tuple(99, 255, 0, 3, 6);
+  auto tuple_value_6 = std::make_tuple(99, 255, 0, "3");
 
   print_ip(oss, tuple_value_1);
   print_ip(oss, tuple_value_2);
-  //print_ip(oss, tuple_value_3);  // compile error
+  print_ip(oss, tuple_value_3);
   //print_ip(oss, tuple_value_4);  // compile error
   //print_ip(oss, tuple_value_5);  // compile error
+  //print_ip(oss, tuple_value_6);  // compile error
 
   BOOST_CHECK_EQUAL(oss.str(), result);
 }

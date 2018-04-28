@@ -31,8 +31,10 @@ auto print_ip(U& out, const T& ip)
 template<typename U, typename T, std::enable_if_t<is_stl_container_v<T>, int> = 0>
 auto print_ip(U& out, const T& ip)
 {
+  if(ip.empty())
+    return;
   std::copy(std::cbegin(ip), std::cend(ip), infix_ostream_iterator<typename T::value_type>(out, "."));
-	out << "\n";
+  out << "\n";
 }
 
 /*!
@@ -59,6 +61,16 @@ auto print_ip(U& out, const T& ip)
 }
 
 /*!
+  \brief Шаблонная функция печати ip адреса, заданного пустым кортежем. Определена для
+  устранения ошибк компиляции функции печати ip адреса, заданного кортежем с одинаковыми типами.
+  \param[in,out] out Потока вывода.
+  \param[in] ip IP адрес.
+*/
+template<typename U, typename T, std::enable_if_t<is_empty_tuple_v<T>, int> = 0>
+auto print_ip(U& out, const T& ip)
+{}
+
+/*!
   \brief Шаблонная функция печати ip адреса, не заданного: любым целочисленным типом;
   контейнером из стандартной библиотеки; кортежем с одинаковыми типами.
   \param[in,out] out Поток вывода.
@@ -66,7 +78,7 @@ auto print_ip(U& out, const T& ip)
 */
 template<typename U, typename T,
         std::enable_if_t<
-            !(is_integral_v<T> || is_stl_container_v<T> || is_homogeneous_tuple_v<T>)
+            !(is_integral_v<T> || is_stl_container_v<T> || is_tuple_v<T>)
             , int> = 0>
 auto print_ip(U& out, const T& ip)
 {

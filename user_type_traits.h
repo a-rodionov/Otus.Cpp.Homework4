@@ -81,11 +81,28 @@ constexpr bool is_all_same_v = is_all_same<Args...>::value;
 template <typename T>
 struct is_homogeneous_tuple : std::false_type{};
 
-template <typename ... Args>
-struct is_homogeneous_tuple<std::tuple<Args...>> : is_all_same<Args...>{};
+template <typename T, typename ... Args>
+struct is_homogeneous_tuple<std::tuple<T, Args...>> : is_all_same<T, Args...>{};
 
 /*!
   \brief Шаблонная переменная для более короткой записи получения результата от метафункции is_homogeneous_tuple.
 */
 template <typename T>
 constexpr bool is_homogeneous_tuple_v = is_homogeneous_tuple<std::remove_cv_t<T>>::value;
+
+
+
+/*!
+  \brief Метафункция, определяющая является ли проверяемый тип пустым кортежем.
+*/
+template <typename T>
+struct is_empty_tuple : std::false_type{};
+
+template <>
+struct is_empty_tuple<std::tuple<>> : std::true_type{};
+
+/*!
+  \brief Шаблонная переменная для более короткой записи получения результата от метафункции is_empty_tuple.
+*/
+template <typename T>
+constexpr bool is_empty_tuple_v = is_empty_tuple<std::remove_cv_t<T>>::value;
